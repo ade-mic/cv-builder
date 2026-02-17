@@ -1,0 +1,80 @@
+/* Print styles for PDF export */
+@media print {
+  /* Reset body styles */
+  body {
+    background: white !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide elements marked as no-print */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Hide navigation, forms, and other UI elements */
+  header,
+  nav,
+  button:not(.cv-preview-container button),
+  aside,
+  .sidebar {
+    display: none !important;
+  }
+
+  /* Full width for CV */
+  .max-w-4xl {
+    max-width: 100% !important;
+  }
+
+  /* Remove padding/margins in print */
+  .py-8,
+  .px-4 {
+    padding: 0 !important;
+  }
+
+  /* Remove shadows and borders */
+  .shadow-lg,
+  .rounded-lg {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Enhance font sizes for print clarity */
+  body {
+    font-size: 11pt !important;
+  }
+
+  /* Make headings more prominent in print */
+  h1 {
+    font-size: 24pt !important;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+  }
+
+  h3 {
+    font-size: 12pt !important;
+  }
+
+  /* Fix page breaks */
+  section {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  /* Ensure colors and backgrounds print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Remove unnecessary margins */
+  .bg-gray-50 {
+    padding: 0 !important;
+  }
+}
